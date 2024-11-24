@@ -67,6 +67,11 @@ ul {
   background: linear-gradient(to top, rgba(0, 0, 0, .25), transparent 70%);
 }
 
+.toggle-btn {
+  width: 100px;
+  height: 100px;
+}
+
 .main-header {
   position: relative;
   min-height: 100vh;

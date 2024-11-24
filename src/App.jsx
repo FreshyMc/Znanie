@@ -25,11 +25,11 @@ function App() {
   return (
     <>
       <nav className='row py-2 position-fixed w-100'>
-        <div className='col-1'>
+        <div className='col-6 col-lg-1'>
           <img src={Logo} alt='Logo' height='100' />
         </div>
-        <div className='col-11 p-0'>
-          <ul className='d-flex p-0 px-4 m-0 w-100 h-100 align-items-stretch nav-links'>
+        <div className='col-6 col-lg-11 p-0'>
+          <ul className='d-none d-lg-flex p-0 px-4 m-0 w-100 h-100 align-items-stretch nav-links'>
             <li>
               <Link to='#' className='bg-1'>
                 <span>Начало</span>
@@ -56,6 +56,44 @@ function App() {
               </Link>
             </li>
           </ul>
+          <button className="d-flex ms-auto d-lg-none btn toggle-btn align-items-center justify-content-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <i className="fa-solid fa-bars fs-2" />
+          </button>
+          <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div className="offcanvas-header">
+              <h1 className="offcanvas-title" id="offcanvasDarkNavbarLabel">Znanie</h1>
+              <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div className="offcanvas-body">
+              <ul className='d-flex align-content-stretch flex-wrap p-4 m-0 w-100 h-100 nav-links'>
+                <li>
+                  <Link to='#' className='bg-1'>
+                    <span>Начало</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='#' className='bg-2'>
+                    <span>История</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='#' className='bg-3'>
+                    <span>Информационни технологии</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='#' className='bg-4'>
+                    <span>За Нас</span>
+                  </Link>
+                </li>
+                <li>
+                  <Link to='#' className='bg-5'>
+                    <span>Контакти</span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </nav>
       <header className='row main-header'>
@@ -72,7 +110,7 @@ function App() {
         <div className="col-12 px-4 py-4">
           <div className="container-fluid m-0 py-4">
             <div className="row my-4 g-4">
-              <div className="col-lg m-0">
+              <div className="col-lg m-lg-0">
                 <div className="coolbox-wrapper">
                   <div className='coolbox'>
                     <div className="front bg-2 d-flex justify-content-center align-items-center">
@@ -89,11 +127,13 @@ function App() {
                             <Link to='#history'>5. клас</Link>
                             <Link to='#history'>6. клас</Link>
                             <Link to='#history'>7. клас</Link>
+                            <Link to='#history'>8. клас</Link>
                           </div>
                           <div className="col d-flex flex-column justify-content-center text-center">
                             <Link to='#history'>9. клас</Link>
                             <Link to='#history'>10. клас</Link>
                             <Link to='#history'>11. клас</Link>
+                            <Link to='#history'>12. клас</Link>
                           </div>
                         </div>
                       </div>
@@ -101,7 +141,7 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg m-0">
+              <div className="col-lg m-lg-0">
                 <div className="coolbox-wrapper">
                   <div className='coolbox'>
                     <div className="front bg-3 d-flex justify-content-center align-items-center">
@@ -118,11 +158,13 @@ function App() {
                             <Link to='#history'>5. клас</Link>
                             <Link to='#history'>6. клас</Link>
                             <Link to='#history'>7. клас</Link>
+                            <Link to='#history'>8. клас</Link>
                           </div>
                           <div className="col d-flex flex-column justify-content-center text-center">
                             <Link to='#history'>9. клас</Link>
                             <Link to='#history'>10. клас</Link>
                             <Link to='#history'>11. клас</Link>
+                            <Link to='#history'>12. клас</Link>
                           </div>
                         </div>
                       </div>
