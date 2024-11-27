@@ -23,6 +23,7 @@
 }
 
 nav {
+  top: 0;
   background-color: #fff;
   box-shadow: 0 0 9px rgba(0, 0, 0, .25);
   z-index: 10;
@@ -75,7 +76,7 @@ ul {
 .main-header {
   position: relative;
   min-height: 100vh;
-  padding-top: 116px;
+  margin-top: 116px;
   background: #fff url('./assets/lib.jpg') center no-repeat;
   background-size: cover;
   color: #fff;
