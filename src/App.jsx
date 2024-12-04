@@ -230,7 +230,7 @@ function App() {
           <Carousel slides={slides} />
         </div>
       </section>
-      <footer className='row p-4'>
+      <footer className='row p-4 mt-4'>
         <div className="col px-2">
           <div className="d-flex align-items-center">
             <h1>Znanie</h1>
