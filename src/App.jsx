@@ -234,7 +234,7 @@ function App() {
               <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'>
                 <h1 className="fs-3">Znanie</h1>
               </p>
-              <p className='px-2 pt-2' className="znanie-style">
+              <p className='px-2 pt-2 znanie-style'>
                 Добре дошли в сайта на „Знание“ – платформата, създадена с мисията да вдъхновява ученици и учители!
               </p>
             </div>
@@ -243,16 +243,16 @@ function App() {
             <div className='footer-content'>
               <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
                   className="fa-solid fa-location-dot fs-3"/><span className='ps-2'>Нашият Адрес</span></p>
-              <p className='px-2 pt-2'className="adres-style">🏙️ Адрес: град Враца</p>
-              <p className='px-2 pb-2'className="adres-style">🏠 Бул. 2 Юни № 19</p>
+              <p className='px-2 pt-2 adres-style'>🏙️ Адрес: град Враца</p>
+              <p className='px-2 pb-2 adres-style'>🏠 Бул. 2 Юни № 19</p>
             </div>
           </div>
           <div className="col px-2">
             <div className='footer-content'>
               <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
                   className="fa-solid fa-phone fs-3"/><span className='ps-2'>Контакти</span></p>
-              <p className='px-2 pt-2'className="adres-style">📞 Телефон: +359 898 38 35 34</p>
-              <p className='px-2 pb-2'className="adres-style">✉️ Имейл: znanie@gmail.com</p>
+              <p className='px-2 pt-2 adres-style'>📞 Телефон: +359 898 38 35 34</p>
+              <p className='px-2 pb-2 adres-style'>✉️ Имейл: znanie@gmail.com</p>
             </div>
           </div>
           <div className="col-12">
