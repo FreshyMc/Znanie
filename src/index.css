@@ -65,7 +65,7 @@ ul {
   padding: 0 9px;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to top, rgba(160,135,191,255), transparent 70%);
+  background: linear-gradient(to top, rgba(160,135,191,255), transparent 20%);
 }
 
 .toggle-btn {
@@ -92,6 +92,7 @@ ul {
   background-repeat: no-repeat;
 }
 
+
 .main-header .slide-content {
   background-color: rgba(0, 0, 0, .45);
   border-radius: .45rem;
@@ -115,6 +116,34 @@ ul {
   left: 0;
   background-color: rgba(0, 0, 0, .35);
   z-index: 1;
+}
+
+.slide {
+  position: relative;
+}
+
+.slide-content {
+  background-color: rgba(0, 0, 0, 0.6); /* Подобряване на четливостта */
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  font-size: 22px; /* Уголемява шрифта */
+  text-indent: 20px; /* Навътре за първия ред */
+  margin-right: 20px; /* Подравнява текста и от дясно */
+  margin-left: 20px; /* Прави първия ред да започне малко навътре */
+  font-style: italic;
+  font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: auto; /* Премахва централното подравняване */
+  bottom: 23%; /* Подравняване спрямо долната част на слайда */
 }
 
 .header-content {
@@ -206,53 +235,76 @@ ul {
 }
 
 .testimonials-section .carousel-indicators button {
-  background-color: #ed4f6e;
-  height: 10px;
+  background-color: #910f0f;
+  height: 5px;
 }
 
+/* Стилизация на заглавието */
 .section-title {
-  color: #ed4f6e;
+  color: #3B3A39;
+  font-family: 'Poppins', sans-serif;
+  font-size: 32px;
+  font-style: italic; /* Курсив за заглавието */
 }
 
 .testimonial {
   min-height: 300px;
   padding: 15px;
-  border-radius: .45rem;
-}
+  border-radius: 50%; /* Променя формата на слайда на кръг */
+  background-color: #f8f9fa; /* Цветен фон на кръга */
+  display: flex; /* Центриране на съдържанието вътре */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Лека сянка */
+  padding: 20px 0;
 
+}
 .testimonial img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  border: 1px solid #ecc0c9;
   overflow: hidden;
+  margin-bottom: 10px; /* Отстояние от името */
 }
-
+/* Стилизация на текста */
 .testimonial span {
   display: block;
 }
 
-.testimonial-top {
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: 2px solid rgba(249,202,214, .65);
-}
-
 .testimonial-content {
   padding: 0 30px;
+  font-style: italic; /* Курсив за текста */
+}
+.name-style {
+  color: #ae6363; /* Примерен стил - променете по ваш вкус */
+  font-weight: bold;
+  font-size: 18px;
 }
 
 footer {
-  background: rgba(160,135,191,255);
-  color: #fff;
+  background: linear-gradient(to top, rgb(148, 111, 179), transparent 100%);
+  color: #332e2c;
+  margin-top: 50px; /* Отстояние от горната част на бодито */
+  padding: 20px 0; /* Допълнителен padding за съдържанието */
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer-box {
-  background-color: rgba(0, 0, 0, .25);
-  border-radius: .35rem;
+footer h1 {
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.footer-content {
-  background-color: rgba(0, 0, 0, .35);
-  border-radius: .35rem;
+.znanie-style {
+  font-style: italic;
+  font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
+  font-size: 17px;
+  margin-top: 9px;
+}
+
+.adres-style {
+  font-size: 17px;
+  margin-top: 9px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
 }
