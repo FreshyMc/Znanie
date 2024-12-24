@@ -14,6 +14,11 @@ export default function Navigation() {
         if (menuShown) {
             menuBtnRef.current.click();
         }
+
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }, [location]);
 
     return (
