@@ -78,86 +78,6 @@ function App() {
 
   return (
       <>
-        {/* Навигационен бар */}
-        <nav className='row py-2 position-fixed w-100'>
-          {/* Лого */}
-          <div className='col-6 col-lg-1'>
-            <img src={Logo} alt='Logo' height='100'/>
-          </div>
-          {/* Линкове за навигация */}
-          <div className='col-6 col-lg-11 p-0'>
-            <ul className='d-none d-lg-flex p-0 px-4 m-0 w-100 h-100 align-items-stretch nav-links'>
-              <li>
-                <Link to='#' className='bg-1'>
-                  <span>Начало</span>
-                </Link>
-              </li>
-              <li>
-                <Link to='#' className='bg-2'>
-                  <span>История</span>
-                </Link>
-              </li>
-              <li>
-                <Link to='#' className='bg-3'>
-                  <span>Информационни технологии</span>
-                </Link>
-              </li>
-              <li>
-                <Link to='#' className='bg-4'>
-                  <span>За Нас</span>
-                </Link>
-              </li>
-              <li>
-                <Link to='#' className='bg-5'>
-                  <span>Контакти</span>
-                </Link>
-              </li>
-            </ul>
-            {/* Бутон за мобилно меню */}
-            <button className="d-flex ms-auto d-lg-none btn toggle-btn align-items-center justify-content-center"
-                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-                    aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-              <i className="fa-solid fa-bars fs-2"/>
-            </button>
-            {/* Мобилно меню */}
-            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
-                 aria-labelledby="offcanvasDarkNavbarLabel">
-              <div className="offcanvas-header">
-                <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div className="offcanvas-body">
-                <ul className='d-flex align-content-stretch flex-wrap p-4 m-0 w-100 h-100 nav-links'>
-                  <li>
-                    <Link to='#' className='bg-1'>
-                      <span>Начало</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='#' className='bg-2'>
-                      <span>История</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='#' className='bg-3'>
-                      <span>Информационни технологии</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='#' className='bg-4'>
-                      <span>За Нас</span>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to='#' className='bg-5'>
-                      <span>Контакти</span>
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </nav>
-
         {/* Хедър с карусел */}
         <header className='row main-header'>
           <div className='col-12 p-0'>
@@ -247,47 +167,6 @@ function App() {
             <Carousel slides={slides}/>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className='row p-4'>
-          {/* Секция за основна информация */}
-          <div className="col px-2">
-            <div className='footer-content'>
-              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'>
-                <h1 className="fs-3">Znanie</h1>
-              </p>
-              <p className='px-2 pt-2' className="znanie-style">
-                Добре дошли в сайта на „Знание“ – платформата, създадена с мисията да вдъхновява ученици и учители!
-              </p>
-            </div>
-          </div>
-
-          {/* Секция за адрес */}
-          <div className="col px-2">
-            <div className='footer-content'>
-              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
-                  className="fa-solid fa-location-dot fs-3"/><span className='ps-2'>Нашият Адрес</span></p>
-              <p className='px-2 pt-2'className="adres-style">🏙️ Адрес: град Враца</p>
-              <p className='px-2 pb-2'className="adres-style">🏠 Бул. 2 Юни № 19</p>
-            </div>
-          </div>
-
-          {/* Секция за контакти */}
-          <div className="col px-2">
-            <div className='footer-content'>
-              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
-                  className="fa-solid fa-phone fs-3"/><span className='ps-2'>Контакти</span></p>
-              <p className='px-2 pt-2'className="adres-style">📞 Телефон: +359 898 38 35 34</p>
-              <p className='px-2 pb-2'className="adres-style">✉️ Имейл: znanie@gmail.com</p>
-            </div>
-          </div>
-
-          {/* Финален ред */}
-          <div className="col-12">
-            <hr/>
-            <p className='m-0 py-2 text-center'>Znanie. All rights reserved.</p>
-          </div>
-        </footer>
       </>
   )
 }

@@ -65,11 +65,7 @@ ul {
   padding: 0 9px;
   align-items: center;
   justify-content: center;
-<<<<<<< HEAD
   background: linear-gradient(to top, rgba(160,135,191,255), transparent 20%);
-=======
-  background: linear-gradient(to top, rgba(160,135,191,255), transparent 70%);
->>>>>>> main
 }
 
 .toggle-btn {
@@ -96,10 +92,6 @@ ul {
   background-repeat: no-repeat;
 }
 
-<<<<<<< HEAD
-
-=======
->>>>>>> main
 .main-header .slide-content {
   background-color: rgba(0, 0, 0, .45);
   border-radius: .45rem;
@@ -239,14 +231,6 @@ ul {
 .testimonials-section {
   height: 90vh;
   background-color: #fff;
-<<<<<<< HEAD
-=======
-}
-
-.testimonials-section .carousel-indicators button {
-  background-color: #ed4f6e;
-  height: 10px;
->>>>>>> main
 }
 
 .testimonials-section .carousel-indicators button {
@@ -256,20 +240,15 @@ ul {
 
 /* Стилизация на заглавието */
 .section-title {
-<<<<<<< HEAD
   color: #3B3A39;
   font-family: 'Poppins', sans-serif;
   font-size: 32px;
   font-style: italic; /* Курсив за заглавието */
-=======
-  color: #ed4f6e;
->>>>>>> main
 }
 
 .testimonial {
   min-height: 300px;
   padding: 15px;
-<<<<<<< HEAD
   border-radius: 50%; /* Променя формата на слайда на кръг */
   background-color: #f8f9fa; /* Цветен фон на кръга */
   display: flex; /* Центриране на съдържанието вътре */
@@ -278,20 +257,12 @@ ul {
   justify-content: center;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Лека сянка */
   padding: 20px 0;
-=======
-  border-radius: .45rem;
-}
->>>>>>> main
 
 }
 .testimonial img {
   border-radius: 50%;
   width: 100px;
   height: 100px;
-<<<<<<< HEAD
-=======
-  border: 1px solid #ecc0c9;
->>>>>>> main
   overflow: hidden;
   margin-bottom: 10px; /* Отстояние от името */
 }
@@ -300,7 +271,6 @@ ul {
   display: block;
 }
 
-<<<<<<< HEAD
 .testimonial-content {
   padding: 0 30px;
   font-style: italic; /* Курсив за текста */
@@ -337,35 +307,9 @@ footer h1 {
   text-align: center;
   font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
 }
-=======
-.testimonial-top {
-  padding-bottom: 25px;
-  margin-bottom: 25px;
-  border-bottom: 2px solid rgba(249,202,214, .65);
-}
-
-.testimonial-content {
-  padding: 0 30px;
-}
-
-footer {
-  background: rgba(160,135,191,255);
-  color: #fff;
-}
-
-.footer-box {
-  background-color: rgba(0, 0, 0, .25);
-  border-radius: .35rem;
-}
-
-.footer-content {
-  background-color: rgba(0, 0, 0, .35);
-  border-radius: .35rem;
-}
 
 main {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 116px);
   margin-top: 116px;
 }
->>>>>>> main

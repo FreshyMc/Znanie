@@ -46,12 +46,12 @@ export default function Navigation() {
                         </Link>
                     </li>
                     <li>
-                        <Link to='#' className='bg-4'>
+                        <Link to='/about-us' className='bg-4'>
                             <span>За Нас</span>
                         </Link>
                     </li>
                     <li>
-                        <Link to='#' className='bg-5'>
+                        <Link to='/contacts' className='bg-5'>
                             <span>Контакти</span>
                         </Link>
                     </li>
