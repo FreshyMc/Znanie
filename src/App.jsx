@@ -1,6 +1,9 @@
+// Импортиране на необходимите зависимости и ресурси
 import { useId, useState } from 'react'
+import Logo from './assets/logo.png';
 import { Link } from 'react-router-dom';
 
+// Импортиране на изображения за слайдове и аватари
 import Slide1 from './assets/kids_1.jpg';
 import Slide2 from './assets/kids_2.jpg';
 import Slide3 from './assets/kids_3.jpg';
@@ -14,132 +17,218 @@ import Avatar2 from './assets/avatar_2.jfif';
 import Avatar3 from './assets/avatar_3.jfif';
 import Avatar4 from './assets/avatar_4.jfif';
 
+// Данни за доволни потребители
 const slides = [
   {
-    name: 'Borko',
+    name: 'Анелия Петрова, родител',
     image: Avatar1,
-    grade: 1,
-    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et quibusdam deleniti repudiandae dignissimos dolor deserunt vitae placeat! Vitae, doloribus.'
+    comment: 'Сайтът е невероятен! Материалите са ясни и много добре организирани. Най-накрая мога да обясня историята на детето си, без да губя часове в търсене на информация.'
   },
   {
-    name: 'Niki',
+    name: 'Михаела Стоянова, родител',
     image: Avatar2,
-    grade: 6,
-    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et quibusdam deleniti repudiandae dignissimos dolor deserunt vitae placeat! Vitae, doloribus.'
+    comment: 'Благодаря за труда и вдъхновението, вложени в тази платформа. Тук откривам всичко необходимо за подготовката на сина ми по ИТ и история.'
   },
   {
-    name: 'Alex',
+    name: 'Мария Колева, ученичка',
     image: Avatar3,
-    grade: 10,
-    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et quibusdam deleniti repudiandae dignissimos dolor deserunt vitae placeat! Vitae, doloribus.'
+    comment: 'Това е най-доброто място за допълнителна подготовка. Презентациите и уроците са не само информативни, но и красиви!'
   },
   {
-    name: 'Diana',
+    name: 'Иван Георгиев, учител',
     image: Avatar4,
-    grade: 11,
-    comment: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt et quibusdam deleniti repudiandae dignissimos dolor deserunt vitae placeat! Vitae, doloribus.'
+    comment: 'Като учител по ИТ, често търся интерактивни ресурси за часовете си. "Знание" ми помага да ангажирам учениците си и да обясня сложните концепции по достъпен начин.'
   }
 ];
 
+// Данни за основния карусел в хедъра
 const headerSlides = [
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Открий вдъхновяващи видеоуроци по история за 5-12. клас! Всичко, от което се нуждаеш, на едно място.',
     image: Slide1
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Подготви се за успех с нашите интерактивни презентации по информационни технологии!',
     image: Slide2
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Знанието е сила! Разгледай новите учебни ресурси за 6. и 7. клас по история.',
     image: Slide3
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Готови за изпит? Виж най-новите ни видеоматериали по ИТ за 12. клас!',
     image: Slide4
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Новина: Добавени са материали за подготовка по история за 10. клас – провери още сега!',
     image: Slide5
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Видеоразходка из Средновековието – разгледай новите материали по история за 7. клас!',
     image: Slide6
   },
   {
-    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem cumque, labore fugit corrupti vitae earum dolor repudiandae quidem, laborum alias est. Rem soluta quaerat sint accusantium molestias cum, earum officiis.',
+    text: 'Следвай пътя към знанието с презентации и видеа, подготвени специално за теб!',
     image: Slide7
   },
 ];
 
+// Главен компонент на приложението
 function App() {
 
   return (
-    <>
-      <header className='row main-header'>
-        <div className='col-12 p-0'>
-          <Carousel slides={headerSlides} isHeader={true} />
-        </div>
-      </header>
-      <section className='row main-section'>
-        <div className="col-12 px-4 py-4">
-          <div className="container-fluid m-0 py-4">
-            <div className="row my-4 g-4">
-              <div className="col-lg m-lg-0">
-                <div className="coolbox-wrapper">
-                  <div className='coolbox'>
-                    <div className="front bg-2 d-flex justify-content-center align-items-center">
-                      <i className="fa-solid fa-landmark fs-2" />
-                      <p className='m-0 py-2 text-center'>История</p>
-                    </div>
-                    <div className="back bg-2 d-flex flex-column">
-                      <p className='m-0 text-center'>
-                        Материали за
-                      </p>
-                      <div className='container flex-grow-1 m-0 p-0'>
-                        <div className="row h-100 m-0 p-0">
-                          <div className="col d-flex flex-column justify-content-center text-center">
-                            <Link to='#history'>5. клас</Link>
-                            <Link to='#history'>6. клас</Link>
-                            <Link to='#history'>7. клас</Link>
-                            <Link to='#history'>8. клас</Link>
-                          </div>
-                          <div className="col d-flex flex-column justify-content-center text-center">
-                            <Link to='#history'>9. клас</Link>
-                            <Link to='#history'>10. клас</Link>
-                            <Link to='#history'>11. клас</Link>
-                            <Link to='#history'>12. клас</Link>
+      <>
+        {/* Навигационен бар */}
+        <nav className='row py-2 position-fixed w-100'>
+          {/* Лого */}
+          <div className='col-6 col-lg-1'>
+            <img src={Logo} alt='Logo' height='100'/>
+          </div>
+          {/* Линкове за навигация */}
+          <div className='col-6 col-lg-11 p-0'>
+            <ul className='d-none d-lg-flex p-0 px-4 m-0 w-100 h-100 align-items-stretch nav-links'>
+              <li>
+                <Link to='#' className='bg-1'>
+                  <span>Начало</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='#' className='bg-2'>
+                  <span>История</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='#' className='bg-3'>
+                  <span>Информационни технологии</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='#' className='bg-4'>
+                  <span>За Нас</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='#' className='bg-5'>
+                  <span>Контакти</span>
+                </Link>
+              </li>
+            </ul>
+            {/* Бутон за мобилно меню */}
+            <button className="d-flex ms-auto d-lg-none btn toggle-btn align-items-center justify-content-center"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+                    aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <i className="fa-solid fa-bars fs-2"/>
+            </button>
+            {/* Мобилно меню */}
+            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar"
+                 aria-labelledby="offcanvasDarkNavbarLabel">
+              <div className="offcanvas-header">
+                <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div className="offcanvas-body">
+                <ul className='d-flex align-content-stretch flex-wrap p-4 m-0 w-100 h-100 nav-links'>
+                  <li>
+                    <Link to='#' className='bg-1'>
+                      <span>Начало</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='#' className='bg-2'>
+                      <span>История</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='#' className='bg-3'>
+                      <span>Информационни технологии</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='#' className='bg-4'>
+                      <span>За Нас</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to='#' className='bg-5'>
+                      <span>Контакти</span>
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        {/* Хедър с карусел */}
+        <header className='row main-header'>
+          <div className='col-12 p-0'>
+            <Carousel slides={headerSlides} isHeader={true}/>
+          </div>
+        </header>
+
+        {/* Основен раздел с избор на категория */}
+        <section className='row main-section'>
+          <div className="col-12 px-4 py-4">
+            <div className="container-fluid m-0 py-4">
+              <div className="row my-4 g-4">
+                {/* Кутия за История */}
+                <div className="col-lg m-lg-0">
+                  <div className="coolbox-wrapper">
+                    <div className='coolbox'>
+                      <div className="front bg-2 d-flex justify-content-center align-items-center">
+                        <i className="fa-solid fa-landmark fs-2"/>
+                        <p className='m-0 py-2 text-center'>История</p>
+                      </div>
+                      <div className="back bg-2 d-flex flex-column">
+                        <p className='m-0 text-center'>
+                          Материали за
+                        </p>
+                        <div className='container flex-grow-1 m-0 p-0'>
+                          <div className="row h-100 m-0 p-0">
+                            <div className="col d-flex flex-column justify-content-center text-center">
+                              <Link to='#history'>5. клас</Link>
+                              <Link to='#history'>6. клас</Link>
+                              <Link to='#history'>7. клас</Link>
+                              <Link to='#history'>8. клас</Link>
+                            </div>
+                            <div className="col d-flex flex-column justify-content-center text-center">
+                              <Link to='#history'>9. клас</Link>
+                              <Link to='#history'>10. клас</Link>
+                              <Link to='#history'>11. клас</Link>
+                              <Link to='#history'>12. клас</Link>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="col-lg m-lg-0">
-                <div className="coolbox-wrapper">
-                  <div className='coolbox'>
-                    <div className="front bg-3 d-flex justify-content-center align-items-center">
-                      <i className="fa-solid fa-desktop fs-2" />
-                      <p className='m-0 py-2 text-center'>Информационни технологии</p>
-                    </div>
-                    <div className="back bg-3 d-flex flex-column">
-                      <p className='m-0 text-center'>
-                        Материали за
-                      </p>
-                      <div className='container flex-grow-1 m-0 p-0'>
-                        <div className="row h-100 m-0 p-0">
-                          <div className="col d-flex flex-column justify-content-center text-center">
-                            <Link to='#history'>5. клас</Link>
-                            <Link to='#history'>6. клас</Link>
-                            <Link to='#history'>7. клас</Link>
-                            <Link to='#history'>8. клас</Link>
-                          </div>
-                          <div className="col d-flex flex-column justify-content-center text-center">
-                            <Link to='#history'>9. клас</Link>
-                            <Link to='#history'>10. клас</Link>
-                            <Link to='#history'>11. клас</Link>
-                            <Link to='#history'>12. клас</Link>
+
+                {/* Кутия за Информационни технологии */}
+                <div className="col-lg m-lg-0">
+                  <div className="coolbox-wrapper">
+                    <div className='coolbox'>
+                      <div className="front bg-3 d-flex justify-content-center align-items-center">
+                        <i className="fa-solid fa-desktop fs-2"/>
+                        <p className='m-0 py-2 text-center'>Информационни технологии</p>
+                      </div>
+                      <div className="back bg-3 d-flex flex-column">
+                        <p className='m-0 text-center'>
+                          Материали за
+                        </p>
+                        <div className='container flex-grow-1 m-0 p-0'>
+                          <div className="row h-100 m-0 p-0">
+                            <div className="col d-flex flex-column justify-content-center text-center">
+                              <Link to='#history'>5. клас</Link>
+                              <Link to='#history'>6. клас</Link>
+                              <Link to='#history'>7. клас</Link>
+                              <Link to='#history'>8. клас</Link>
+                            </div>
+                            <div className="col d-flex flex-column justify-content-center text-center">
+                              <Link to='#history'>9. клас</Link>
+                              <Link to='#history'>10. клас</Link>
+                              <Link to='#history'>11. клас</Link>
+                              <Link to='#history'>12. клас</Link>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -149,87 +238,141 @@ function App() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section className='row testimonials-section'>
-        <div className='col-12 p-0 d-flex flex-column'>
-          <h1 className='text-center py-1 m-0 mt-4 section-title'>Доволни потребители</h1>
-          <Carousel slides={slides} />
-        </div>
-      </section>
-    </>
+        </section>
+
+        {/* Секция със доволни потребители */}
+        <section className='row testimonials-section'>
+          <div className='col-12 p-0 d-flex flex-column'>
+            <h1 className='text-center py-1 m-0 mt-4 section-title'>Доволни потребители</h1>
+            <Carousel slides={slides}/>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className='row p-4'>
+          {/* Секция за основна информация */}
+          <div className="col px-2">
+            <div className='footer-content'>
+              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'>
+                <h1 className="fs-3">Znanie</h1>
+              </p>
+              <p className='px-2 pt-2' className="znanie-style">
+                Добре дошли в сайта на „Знание“ – платформата, създадена с мисията да вдъхновява ученици и учители!
+              </p>
+            </div>
+          </div>
+
+          {/* Секция за адрес */}
+          <div className="col px-2">
+            <div className='footer-content'>
+              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
+                  className="fa-solid fa-location-dot fs-3"/><span className='ps-2'>Нашият Адрес</span></p>
+              <p className='px-2 pt-2'className="adres-style">🏙️ Адрес: град Враца</p>
+              <p className='px-2 pb-2'className="adres-style">🏠 Бул. 2 Юни № 19</p>
+            </div>
+          </div>
+
+          {/* Секция за контакти */}
+          <div className="col px-2">
+            <div className='footer-content'>
+              <p className='d-flex align-items-center justify-content-center fs-3 py-2 m-0 footer-box'><i
+                  className="fa-solid fa-phone fs-3"/><span className='ps-2'>Контакти</span></p>
+              <p className='px-2 pt-2'className="adres-style">📞 Телефон: +359 898 38 35 34</p>
+              <p className='px-2 pb-2'className="adres-style">✉️ Имейл: znanie@gmail.com</p>
+            </div>
+          </div>
+
+          {/* Финален ред */}
+          <div className="col-12">
+            <hr/>
+            <p className='m-0 py-2 text-center'>Znanie. All rights reserved.</p>
+          </div>
+        </footer>
+      </>
   )
 }
 
-function Carousel({ slides, isHeader = false }) {
+// Компонент за карусел
+function Carousel({slides, isHeader = false}) {
   const id = useId();
 
   return (
-    <div id={id} className="carousel slide h-100" data-bs-ride="carousel">
-      <div className="carousel-indicators mb-1 mb-lg-3">
+      <div id={id} className="carousel slide h-100" data-bs-ride="carousel">
+        <div className="carousel-indicators mb-1 mb-lg-3">
+          {
+            // Създаване на индикатори за слайдовете
+            slides.map((slide, i) => <button type="button" data-bs-target={`#${id}`} data-bs-slide-to={i}
+                                             className={`${i === 0 ? 'active' : ''}`} aria-current={`${i === 0}`}
+                                             aria-label={`Slide ${i}`}></button>)
+          }
+        </div>
+        <div className="carousel-inner h-100">
+          {
+            // Рендиране на слайдовете според вида на карусела
+            slides.map((slide, i) => (isHeader) ? <HeaderSlide {...slide} active={i === 0}/> :
+                <CarouselSlide {...slide} active={i === 0}/>)
+          }
+        </div>
         {
-          slides.map((slide, i) => <button type="button" data-bs-target={`#${id}`} data-bs-slide-to={i} className={`${i === 0 ? 'active' : ''}`} aria-current={`${i === 0}`} aria-label={`Slide ${i}`}></button>)
+          // Навигационни бутони, ако каруселът е в хедъра
+            isHeader && (
+                <>
+                  <button className="carousel-control-prev" type="button" data-bs-target={`#${id}`} data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                  </button>
+                  <button className="carousel-control-next" type="button" data-bs-target={`#${id}`} data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                  </button>
+                </>
+            )
         }
       </div>
-      <div className="carousel-inner h-100">
-        {
-          slides.map((slide, i) => (isHeader) ? <HeaderSlide {...slide} active={i === 0} /> : <CarouselSlide {...slide} active={i === 0} />)
-        }
-      </div>
-      {
-        isHeader && (
-          <>
-            <button className="carousel-control-prev" type="button" data-bs-target={`#${id}`} data-bs-slide="prev">
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button className="carousel-control-next" type="button" data-bs-target={`#${id}`} data-bs-slide="next">
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Next</span>
-            </button>
-          </>
-        )
-      }
-    </div>
   );
 }
 
+// Слайд за хедър карусела
 function HeaderSlide({ header = 'Znanie', text, active, image }) {
   return (
-    <div className={`carousel-item h-100 ${active ? 'active' : ''}`} data-bs-interval="5000">
-      <div className='w-100 h-100 d-flex align-items-center justify-content-center slide' style={{ backgroundImage: `url(${image})` }}>
-        <div className='col-6 slide-content p-4'>
-          <h1 className='text-center'>{header}</h1>
-          <p className='text-center'>
-            {text}
-          </p>
+      <div className={`carousel-item h-100 ${active ? 'active' : ''}`} data-bs-interval="5000">
+        <div
+            className="slide"
+            style={{
+              backgroundImage: `url(${image})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              height: '60vh', // Височина на контейнера
+            }}
+        >
+          <div className="slide-content">
+            <p className="text-center">{text}</p>
+          </div>
         </div>
       </div>
-    </div>
   );
 }
 
+// Слайд за секция с коментари от доволни потребители
 function CarouselSlide({ image, name, comment, grade, active }) {
   return (
-    <div className={`carousel-item h-100 ${active ? 'active' : ''}`} data-bs-interval="5000">
-      <div className='w-100 h-100 d-flex align-items-center justify-content-center'>
-        <div className='testimonial col-9 col-lg-6'>
-          <div className='d-flex flex-column align-items-center testimonial-top'>
-            <img src={image} />
+      <div className={`carousel-item h-100 ${active ? 'active' : ''}`} data-bs-interval="5000">
+        <div className='w-100 h-100 d-flex align-items-center justify-content-center'>
+          <div className='testimonial col-9 col-lg-6'>
+            <div className='d-flex flex-column align-items-center testimonial-top'>
+              <img src={image}/>
+
+            </div>
+            <p className='testimonial-content text-center fs-4'>"{comment}"</p>
             <p className='d-flex flex-column align-items-center fs-3 m-0'>
-              <span>
+              <span className="name-style">
                 {name}
-              </span>
-              <span className='fs-5'>
-                {grade}. клас
               </span>
             </p>
           </div>
-          <p className='testimonial-content text-center fs-4'>"{comment}"</p>
         </div>
       </div>
-    </div>
   );
 }
 
-export default App
+export default App;
