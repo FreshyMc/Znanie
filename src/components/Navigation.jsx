@@ -41,7 +41,7 @@ export default function Navigation() {
                         </Link>
                     </li>
                     <li>
-                        <Link to='/courses' className='bg-3'>
+                        <Link to='/IT' className='bg-3'>
                             <span>Информационни технологии</span>
                         </Link>
                     </li>
@@ -77,7 +77,7 @@ export default function Navigation() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/courses' className='bg-3'>
+                                <Link to='/IT' className='bg-3'>
                                     <span>Информационни технологии</span>
                                 </Link>
                             </li>

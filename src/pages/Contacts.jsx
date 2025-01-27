@@ -1,29 +1,78 @@
 export default function Contacts() {
     return (
-        <main>
-            <div class="container py-4">
-                <div class="contact-form">
-                    <h2 class="text-center">Свържете се с нас</h2>
-                    <form>
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Име</label>
-                            <input type="text" class="form-control" id="name" placeholder="Въведете вашето име" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Имейл</label>
-                            <input type="email" class="form-control" id="email" placeholder="Въведете вашия имейл" required />
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Съобщение</label>
-                            <textarea class="form-control" id="message" rows="4" placeholder="Въведете вашето съобщение" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">Изпрати</button>
-                    </form>
-                    <div class="mt-4">
-                        <h5>Адрес:</h5>
-                        <div style={{width: '100%', paddingTop: '25px', paddingBottom: '25px'}}>
-                            <iframe class="rounded shadow" width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=23.540954589843754%2C43.20642705583016%2C23.544296622276306%2C43.207793613657735&amp;layer=mapnik&amp;marker=43.20035%2C23.55175"></iframe>
-                        </div>
+        <main id="contacts-page" className="container py-5">
+            <h2 className="text-center mb-4">Свържете се с нас</h2>
+            <p className="text-center text-muted mb-5">
+                Свържете се с нас за въпроси, предложения или допълнителна информация.
+            </p>
+
+            <div className="row">
+                <div className="col-lg-6 mb-4">
+                    <div className="form-wrapper rounded shadow p-4">
+                        <h4 className="mb-3">Изпратете съобщение</h4>
+                        <form>
+                            <div className="mb-3">
+                                <label htmlFor="name" className="form-label">Име</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    id="name"
+                                    placeholder="Въведете вашето име"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="email" className="form-label">Имейл</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    id="email"
+                                    placeholder="Въведете вашия имейл"
+                                    required
+                                />
+                            </div>
+                            <div className="mb-3">
+                                <label htmlFor="message" className="form-label">Съобщение</label>
+                                <textarea
+                                    className="form-control"
+                                    id="message"
+                                    rows="4"
+                                    placeholder="Въведете вашето съобщение"
+                                    required
+                                ></textarea>
+                            </div>
+                            <button type="submit" className="btn btn-primary w-100">
+                                Изпрати
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div className="col-lg-6">
+                    <h4 className="mb-3">Нашият адрес</h4>
+                    <p className="text-muted mb-3">
+                        Намерете ни на адреса по-долу или използвайте картата, за да планирате вашето посещение.
+                    </p>
+                    <address className="text-muted mb-4">
+                        <strong>Град Враца, България</strong>
+                        <br />
+                        бул. 2 Юни № 19
+                        <br />
+                        Телефон: +359 898 38 35 34
+                        <br />
+                        Имейл: <a href="mailto:znanie@gmail.com">znanie@gmail.com</a>
+                    </address>
+                    <div className="map-container rounded shadow-lg">
+                        <iframe
+                            className="map-frame"
+                            width="100%"
+                            height="400"
+                            frameBorder="0"
+                            scrolling="no"
+                            marginHeight="0"
+                            marginWidth="0"
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=23.5512%2C43.2000%2C23.5522%2C43.2006&layer=mapnik&marker=43.2003%2C23.5517"
+                        ></iframe>
                     </div>
                 </div>
             </div>

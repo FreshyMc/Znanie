@@ -160,8 +160,89 @@ ul {
   font-size: 2.5em;
 }
 
+/* Стилове за линковете (5-12 клас) */
+.coolbox .back a {
+  font-size: 1em;
+  color: #fff;
+  text-decoration: none;
+  margin: 5px 0;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+/* Стилове за "Материали за" */
+.coolbox .back p {
+  font-size: 1.3em;
+  font-style: italic;
+  color: #ffebcc;
+}
+/* Ховър ефекти за текста „Материали за“ */
+.coolbox .front p:hover,
+.coolbox .back p:hover {
+  color: #ffffff; /* Бял нюанс */
+  text-shadow: 2px 2px 4px rgba(247, 245, 241, 0.6); /* Добавен блясък */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+/* Декоративен акцент за текста */
+.coolbox .front p::before,
+.coolbox .back p::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  border-radius: 12px; /* Заоблени ъгли */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  z-index: -1;
+  filter: blur(8px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.coolbox .front p:hover::before,
+.coolbox .back p:hover::before {
+  opacity: 1; /* Активиране на акцента */
+}
+/* Ховър ефекти за линковете */
+.coolbox .back a:hover {
+  color: #8a8484;
+  background: #ebeae7; /* Златист фон */
+  transform: translateY(-2px); /* Леко повдигане при ховър */
+}
+/* Текст с подчертаване и сянка */
+.coolbox .back a:hover {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Основни стилове за кутията и нейните елементи */
 .coolbox-wrapper {
   perspective: 1000px;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.coolbox-wrapper .coolbox {
+  border-radius: 12px; /* Заоблени ъгли */
+  max-width: 100%;
+  transition: transform 0.3s ease; /* Плавен преход при ховър */
+  display: flex;
+  justify-content: center;
+}
+
+.coolbox-wrapper .coolbox .front,
+.coolbox-wrapper .coolbox .back {
+  border-radius: 12px; /* Заоблени форми за двете страни на кутията */
+  overflow: hidden; /* Избягвай излизането на съдържанието извън рамките */
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
 .coolbox-wrapper:hover .front {
@@ -177,8 +258,13 @@ ul {
 .coolbox {
   position: relative;
   height: 350px;
+  width: 90%;
+  max-width: 200px; /* Ограничаваме максималната ширина на кутията */
   transform-style: preserve-3d;
-  transition: transform .4s ease;
+  transition: transform 0.4s ease;
+  display: flex;
+  justify-content: center;
+  gap: 0px; /* Пространството между правоъгълниците */
 }
 
 .coolbox .front,
@@ -225,7 +311,36 @@ ul {
 }
 
 .coolbox .back a:hover {
-  color: #E08E45;
+  color: #5f5954;
+}
+
+/* Адаптивни стилове */
+@media (max-width: 768px) {
+  /* За мобилни устройства */
+  .coolbox {
+    height: 250px; /* Намалена височина за мобилни устройства */
+    max-width: 90%; /* За мобилни устройства - по-малка ширина */
+  }
+
+  .coolbox .front,
+  .coolbox .back {
+    font-size: 1.2em; /* Намален шрифт за по-малки екрани */
+    padding: 20px; /* Намалена вътрешна подложка */
+  }
+}
+
+@media (max-width: 576px) {
+  /* За много малки екрани (мобилни телефони) */
+  .coolbox {
+    height: 200px; /* Още по-малка височина */
+    max-width: 80%; /* Ширина за малки устройства */
+  }
+
+  .coolbox .front,
+  .coolbox .back {
+    font-size: 1em; /* Намален шрифт */
+    padding: 15px; /* Намалена вътрешна подложка */
+  }
 }
 
 .testimonials-section {
@@ -240,12 +355,13 @@ ul {
 
 /* Стилизация на заглавието */
 .section-title {
-  color: #3B3A39;
-  font-family: 'Poppins', sans-serif;
-  font-size: 32px;
+  font-size: 34px;
   font-style: italic; /* Курсив за заглавието */
+  font-family: 'Georgia', serif;
+  color: #4b4949;
+  text-shadow: 4px 4px 6px rgba(82, 81, 79, 0.6); /* Добавен блясък */
 }
-
+  
 .testimonial {
   min-height: 300px;
   padding: 15px;
@@ -274,6 +390,9 @@ ul {
 .testimonial-content {
   padding: 0 30px;
   font-style: italic; /* Курсив за текста */
+  font-family: 'Georgia', serif;
+  color: #4b4949; /* Бял нюанс */
+  text-shadow: 4px 4px 6px rgba(100, 100, 98, 0.6); /* Добавен блясък */
 }
 .name-style {
   color: #ae6363; /* Примерен стил - променете по ваш вкус */
@@ -281,35 +400,370 @@ ul {
   font-size: 18px;
 }
 
-footer {
-  background: linear-gradient(to top, rgb(108, 71, 135), transparent 100%);
-  color: #332e2c;
-  margin-top: 50px; /* Отстояние от горната част на бодито */
-  padding: 20px 0; /* Допълнителен padding за съдържанието */
-  font-family: 'Poppins', sans-serif;
+/* Основен контейнер на футъра */
+.footer-container {
+  background: linear-gradient(145deg, #1e1e2f, #2e2e4d);
+  color: #fff;
+  padding: 20px 15px; /* Намалено от 40px */
+  margin: 20px 0 0; /* Малко пространство над футъра */
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 15px; /* Заоблени краища */
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-footer h1 {
-  margin-bottom: 15px;
-  font-family: 'Poppins', sans-serif;
-}
-
-.znanie-style {
-  font-style: italic;
-  font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
-  font-size: 17px;
-  margin-top: 9px;
-}
-
-.adres-style {
-  font-size: 17px;
-  margin-top: 9px;
+/* Секции във футъра */
+.footer-section {
+  flex: 1 1 300px;
   text-align: center;
-  font-family: 'Poppins', sans-serif; /* По-интересен шрифт */
+  margin: 10px 0;
+  padding: 10px; /* Вътрешен отстъп за естетика */
+  border-radius: 15px; /* Заоблени краища */
+  background: rgba(255, 255, 255, 0.05); /* Лека полупрозрачност */
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* Ефект при ховър */
+.footer-section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Заглавие на секциите */
+.footer-heading {
+  font-size: 1.4rem;
+  color: #ffe08a;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Текст в секциите */
+.footer-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+/* Лого на футъра */
+.footer-logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffe08a;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Описание на платформата */
+.footer-description {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #dcdcdc;
+  font-style: italic; /* Добавен курсив за акцент */
+  text-align: justify; /* Двустранно подравняване */
+}
+
+/* Долна част на футъра */
+.footer-bottom {
+  text-align: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.footer-line {
+  border: none;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 20px auto;
+  width: 80%;
+}
+
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+/* Ховър ефекти */
+.footer-heading:hover,
+.footer-logo:hover {
+  color: #ffffff;
+  text-shadow: 3px 3px 6px rgba(255, 255, 255, 0.3);
+}
+
+.footer-text:hover {
+  color: #ffe08a;
+}
+
+/* Анимация за декоративен акцент */
+.footer-section:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  z-index: -1;
+  filter: blur(10px);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.footer-section:hover:before {
+  opacity: 1;
+}
+
 
 main {
   width: 100%;
   min-height: calc(100vh - 116px);
   margin-top: 116px;
+}
+.resource-box {
+  border-radius: 20px;
+  padding: 20px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5); /* Междинен вътрешен цвят за балансирана видимост */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.resource-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+.three-d-box {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)); /* По-светъл градиент за фона */
+}
+
+.three-d-box::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: -1;
+  filter: blur(5px);
+}
+
+.categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.categories a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem; /* Увеличаване на шрифта с 2 единици */
+  margin: 5px 0;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
+}
+
+.categories a:hover {
+  color: #2d2e3b;
+  background: #ebeae7;
+  transform: translateY(-2px); /* Леко повдигане при ховър */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.courses-page h1{
+  font-style: italic;
+  font-size: 3rem; /* Увеличаване на шрифта на заглавието */
+  color: #4b4949; /* Бял нюанс */
+  text-shadow: 4px 4px 6px rgba(63, 62, 60, 0.6); /* Добавен блясък */
+}
+.resource-box h2{
+  font-style: italic;
+  font-size: 2rem; /* Увеличаване на шрифта на заглавието */
+  color: #ffffff; /* Бял нюанс */
+}
+
+.resource-box h2:hover {
+  font-style: italic;
+  color: #ffffff; /* Бял нюанс */
+  text-shadow: 2px 2px 4px rgba(247, 245, 241, 0.6); /* Добавен блясък */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+.courses-page {
+  margin-top: 150px; /* Увеличено отстояние от горната част */
+  margin-bottom: 100px; /* Запазено отстояние от долната част */
+}
+
+/* Основен стил за страницата За нас */
+#about-us {
+  padding: 60px 20px;
+  margin-top: 100px; /* Разстояние от навигацията */
+  margin-bottom: 100px; /* Разстояние от фуутъра */
+}
+
+#about-us h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+#about-us .lead {
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+  font-style: italic; /* Курсив за да подчертаем текста */
+  font-family: 'Georgia', serif;
+  color: #4b4949; /* Бял нюанс */
+  text-shadow: 4px 4px 6px rgba(63, 62, 60, 0.6); /* Добавен блясък */
+}
+
+#about-us p {
+  font-size: 1.1rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: justify; /* Двустранно подравняване */
+  text-indent: 30px; /* Отстъп на първия ред */
+  font-family: 'Roboto', sans-serif; /* Използване на различен шрифт */
+}
+
+#about-us h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #444;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+  
+}
+
+#about-us ul {
+  padding-left: 20px;
+}
+
+#about-us li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #444;
+  text-align: justify; /* Двустранно подравняване */
+  text-indent: 30px; /* Отстъп на първия ред */
+}
+
+@media (max-width: 768px) {
+  #about-us .row {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  #about-us .col-md-6 {
+      flex: 1 1 100%;
+      min-width: 100%;
+  }
+}
+
+/* КОНТАКТНА СТРАНИЦА */
+#contacts-page {
+  padding: 60px 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#contacts-page address {
+  color: #faf7f7; /* Бял нюанс */
+  text-shadow: 4px 4px 6px rgba(161, 160, 159, 0.6); /* Добавен блясък */
+}
+#contacts-page h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+#contacts-page p {
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.8;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 20px;
+}
+
+#contacts-page .form-wrapper {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-page .form-label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+#contacts-page .form-control {
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#contacts-page .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+
+#contacts-page .btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+#contacts-page .btn-primary:hover {
+  background-color: #0056b3;
+}
+
+#contacts-page .map-container {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-page .map-frame {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contacts-page .map-frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  #contacts-page .form-wrapper,
+  #contacts-page .map-container {
+      margin-bottom: 20px;
+  }
 }
