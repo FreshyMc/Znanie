@@ -73,7 +73,6 @@ const headerSlides = [
   },
 ];
 
-// Главен компонент на приложението
 function App() {
 
   return (
@@ -90,6 +89,7 @@ function App() {
           <div className="col-12 px-4 py-4">
             <div className="container-fluid m-0 py-4">
               <div className="row my-4 g-0">
+                
                 {/* Кутия за История */}
                 <div className="col-lg m-lg-0">
                   <div className="coolbox-wrapper">
@@ -99,24 +99,12 @@ function App() {
                         <p className='m-0 py-2 text-center'>История</p>
                       </div>
                       <div className="back bg-2 d-flex flex-column">
-                        <p className='m-0 text-center'>
-                          Материали за
-                        </p>
-                        <div className='container flex-grow-1 m-0 p-0'>
-                          <div className="row h-100 m-0 p-0">
-                            <div className="col d-flex flex-column justify-content-center text-center">
-                              <Link to='#history'>5. клас</Link>
-                              <Link to='#history'>6. клас</Link>
-                              <Link to='#history'>7. клас</Link>
-                              <Link to='#history'>8. клас</Link>
-                            </div>
-                            <div className="col d-flex flex-column justify-content-center text-center">
-                              <Link to='#history'>9. клас</Link>
-                              <Link to='#history'>10. клас</Link>
-                              <Link to='#history'>11. клас</Link>
-                              <Link to='#history'>12. клас</Link>
-                            </div>
-                          </div>
+                        <p className='m-0 text-center'>Материали по</p>
+                        <div className='container flex-grow-1 d-flex align-items-center justify-content-center'>
+                          {/* Добавен бутон с икона за История */}
+                          <Link to="/courses" className="category-btn">
+                            <i className="fa-solid fa-book-open"></i>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -132,34 +120,22 @@ function App() {
                         <p className='m-0 py-2 text-center'>Информационни технологии</p>
                       </div>
                       <div className="back bg-3 d-flex flex-column">
-                        <p className='m-0 text-center'>
-                          Материали за
-                        </p>
-                        <div className='container flex-grow-1 m-0 p-0'>
-                          <div className="row h-100 m-0 p-0">
-                            <div className="col d-flex flex-column justify-content-center text-center">
-                              <Link to='/presentation.files/5-class'>5. клас</Link>
-                              <Link to='/presentation.files/6-class'>6. клас</Link>
-                              <Link to='/presentation.files/7-class'>7. клас</Link>
-                              <Link to='/presentation.files/8-class'>8. клас</Link>
-                            </div>
-                            <div className="col d-flex flex-column justify-content-center text-center">
-                              <Link to='/presentation.files/9-class'>9. клас</Link>
-                              <Link to='/presentation.files/10-class'>10. клас</Link>
-                              <Link to='/presentation.files/11-class'>11. клас</Link>
-                              <Link to='/presentation.files/12-class'>12. клас</Link>
-                            </div>
-                          </div>
+                        <p className='m-0 text-center'>Материали по</p>
+                        <div className='container flex-grow-1 d-flex align-items-center justify-content-center'>
+                          {/* Добавен бутон с икона за ИТ */}
+                          <Link to="/it" className="category-btn">
+                            <i className="fa-solid fa-laptop-code"></i>
+                          </Link>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
         </section>
-        
 
         {/* Секция със доволни потребители */}
         <section className='row testimonials-section'>

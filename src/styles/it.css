@@ -1,0 +1,251 @@
+/* Общи стилове за страници */
+.presentations-page {
+  padding-top: 120px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e6f0ff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s ease-out;
+}
+
+.videos-page {
+  padding-top: 120px;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #f4f4f9, #e6f0ff);
+  min-height: 140vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Заглавия - Презентации */
+.presentations-header {
+  font-size: 2.5rem;
+  color: #4a90e2;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-shadow: 4px 4px 10px rgba(82, 81, 79, 0.6);
+  animation: slideIn 1.2s ease-out;
+}
+
+/* Заглавия - Видеоматериали */
+.videos-header {
+  font-size: 2.5rem;
+  color: #0056b3;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: italic;
+  text-shadow: 4px 4px 10px rgba(50, 50, 50, 0.6);
+  animation: slideIn 1.2s ease-out;
+}
+
+/* Контейнери - Презентации */
+.presentations-container {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Контейнери - Видеоматериали */
+.videos-container {
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Списъци - Презентации */
+.presentations-list {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* Списъци - Видеоматериали */
+.videos-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две на ред */
+  gap: 25px;
+  justify-content: center; /* Центриране на елементите */
+  align-items: center;
+}
+
+/* Елементи - Презентации */
+.presentation-item {
+  background: linear-gradient(135deg, #eaf4fe, #ffffff);
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.presentation-item:hover {
+  background: linear-gradient(135deg, #4a90e2, #0056b3);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Елементи - Видеоматериали */
+.video-item {
+  background: linear-gradient(135deg, #f0f8ff, #ffffff);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-item:hover {
+  background: linear-gradient(135deg, #0056b3, #4a90e2);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Линкове */
+.presentation-link, .video-link {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.presentation-item:hover .presentation-link, .video-item:hover .video-link {
+  color: #ffffff;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Видеоплеър */
+.video-embed {
+  width: 100%;
+  max-width: 400px;
+  height: 150px;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Заглавие на видеоуроците */
+.video-title {
+  font-size: 1.6rem;
+  color: #4a90e2;
+  font-weight: bold;
+  text-align: center;
+  margin: 15px 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #eaf4fe, #ffffff);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.video-title:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #4a90e2, #0056b3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Бутон за връщане */
+.back-button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #4a90e2, #0056b3);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  margin-top: 40px; /* Разстояние над бутона */
+  margin-bottom: 20px; /* Добавено отстояние под бутона */
+}
+
+.back-button:hover {
+  background: linear-gradient(135deg, #0056b3, #4a90e2);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Адаптивност */
+@media (max-width: 768px) {
+  .presentations-header, .videos-header {
+    font-size: 2rem;
+  }
+
+  .presentation-item, .video-item {
+    padding: 15px;
+  }
+
+  .video-embed {
+    height: 250px;
+  }
+
+  .videos-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto 40px; /* 40px отстояние под видеоплеърите */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .back-button {
+    font-size: 1rem;
+    padding: 10px 16px;
+  }
+}

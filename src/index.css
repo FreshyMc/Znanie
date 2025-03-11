@@ -160,19 +160,6 @@ ul {
   font-size: 2.5em;
 }
 
-/* Стилове за линковете (5-12 клас) */
-.coolbox .back a {
-  font-size: 1em;
-  color: #fff;
-  text-decoration: none;
-  margin: 5px 0;
-  display: inline-block;
-  padding: 5px 10px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  transition: color 0.3s ease, background 0.3s ease, transform 0.2s ease;
-}
-
 /* Стилове за "Материали за" */
 .coolbox .back p {
   font-size: 1.3em;
@@ -186,36 +173,37 @@ ul {
   text-shadow: 2px 2px 4px rgba(247, 245, 241, 0.6); /* Добавен блясък */
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
-/* Декоративен акцент за текста */
-.coolbox .front p::before,
-.coolbox .back p::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
-  border-radius: 12px; /* Заоблени ъгли */
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  z-index: -1;
-  filter: blur(8px);
-  transition: opacity 0.3s ease;
-  opacity: 0;
+
+/* 🔹 Стил за бутоните */
+.category-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  font-size: 1.8rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
 }
 
-.coolbox .front p:hover::before,
-.coolbox .back p:hover::before {
-  opacity: 1; /* Активиране на акцента */
+/* 🔹 Ефект при hover */
+.category-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.2);
 }
-/* Ховър ефекти за линковете */
-.coolbox .back a:hover {
-  color: #8a8484;
-  background: #ebeae7; /* Златист фон */
-  transform: translateY(-2px); /* Леко повдигане при ховър */
+
+/* 🔹 Плавно появяване при обръщане */
+.coolbox .back .category-btn {
+  animation: fadeIn 0.5s ease-in-out;
 }
-/* Текст с подчертаване и сянка */
-.coolbox .back a:hover {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+
+/* 🔹 Градиентен фон за бутоните (опционално) */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 /* Основни стилове за кутията и нейните елементи */
@@ -291,28 +279,11 @@ body {
   transform: translate3d(0, -150px, -150px) rotate3d(1, 0, 0, 90deg);
 }
 
-.coolbox .front {
-  opacity: 1;
-}
-
-.coolbox .back::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, .25);
-  z-index: -1;
-}
 
 .coolbox .back a {
   color: #fff;
 }
 
-.coolbox .back a:hover {
-  color: #5f5954;
-}
 
 /* Адаптивни стилове */
 @media (max-width: 768px) {

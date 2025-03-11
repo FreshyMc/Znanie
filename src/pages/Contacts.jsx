@@ -1,4 +1,27 @@
+import { useState } from "react";
+import { db, collection, addDoc } from "../config/firebase";
+
 export default function Contacts() {
+    const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.id]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log("Изпращане на данни:", formData); // ✅ Виждаме какво се изпраща
+
+        try {
+            await addDoc(collection(db, "contacts"), formData);
+            alert("✅ Съобщението е изпратено успешно!");
+            setFormData({ name: "", email: "", message: "" });
+        } catch (error) {
+            console.error("❌ Грешка при изпращане:", error);
+            alert("⚠️ Възникна грешка при изпращането. Виж конзолата за подробности.");
+        }
+    };
+
     return (
         <main id="contacts-page" className="container py-5">
             <h2 className="text-center mb-4">Свържете се с нас</h2>
@@ -10,14 +33,15 @@ export default function Contacts() {
                 <div className="col-lg-6 mb-4">
                     <div className="form-wrapper rounded shadow p-4">
                         <h4 className="mb-3">Изпратете съобщение</h4>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <label htmlFor="name" className="form-label">Име</label>
                                 <input
                                     type="text"
                                     className="form-control"
                                     id="name"
-                                    placeholder="Въведете вашето име"
+                                    value={formData.name}
+                                    onChange={handleChange}
                                     required
                                 />
                             </div>
@@ -27,7 +51,8 @@ export default function Contacts() {
                                     type="email"
                                     className="form-control"
                                     id="email"
-                                    placeholder="Въведете вашия имейл"
+                                    value={formData.email}
+                                    onChange={handleChange}
                                     required
                                 />
                             </div>
@@ -37,7 +62,8 @@ export default function Contacts() {
                                     className="form-control"
                                     id="message"
                                     rows="4"
-                                    placeholder="Въведете вашето съобщение"
+                                    value={formData.message}
+                                    onChange={handleChange}
                                     required
                                 ></textarea>
                             </div>

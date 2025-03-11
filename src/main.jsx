@@ -10,6 +10,8 @@ import Contacts from './pages/Contacts.jsx';
 import About from './pages/About.jsx';
 import PresentationsPage from './pages/presentations/PresentationsPage.jsx';
 import VideosPage from './pages/videos/VideosPage.jsx';
+import PresentationsPageIT from './pages/presentations/PresentationsPageIT.jsx'; // Име променено
+import VideosPageIT from './pages/videos/VideosPageIT.jsx'; // Име променено
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -17,13 +19,15 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<Common />}>
           <Route index element={<App />} />
-          <Route index element={<Courses />} />
           <Route path="courses" element={<Courses />} />
           <Route path="IT" element={<IT />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="about-us" element={<About />} />
           <Route path="courses/presentations/:classId" element={<PresentationsPage />} />
           <Route path="courses/videos/:classId" element={<VideosPage />} />
+          {/* Нови маршрути за IT */}
+          <Route path="it/presentations/:classId" element={<PresentationsPageIT />} />
+          <Route path="it/videos/:classId" element={<VideosPageIT />} />
         </Route>
       </Routes>
     </BrowserRouter>
