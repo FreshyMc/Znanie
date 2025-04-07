@@ -1,35 +1,35 @@
 const presentations = {
   "5-class": [
-    { id: 1, presentation:<iframe src="https://univt-my.sharepoint.com/personal/s2121010306_sd_uni-vt_bg/_layouts/15/Doc.aspx?sourcedoc={24fec901-dee4-4e92-a06c-a8c9b9e3ff37}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Това е вграден файл тип \"презентация\" на <a target="_blank" href="https://office.com">Microsoft Office</a>, поддържан от <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>, title: "Урок 1: Първите хора", link: "/History_files/presentation.files/5-class/presentation1.pdf" },
+    { id: 1, title: "Урок 1: Днешните български земи през праисторическата епоха", link: "/History_files/presentation.files/5-class/Днешните_български_земи_през_праисторическата_епоха.pdf"},
     { id: 2, title: "Урок 2: Земеделието променя света", link: "https://www.canva.com/design/DAGS5ESEYMM/BrzDDZRqDJM8KWaUIq7-BQ/edit" },
   ],
   "6-class": [
-    { id: 1, title: "Урок 1: Средновековие", presentation: <iframe src="https://univt-my.sharepoint.com/personal/s2121010306_sd_uni-vt_bg/_layouts/15/Doc.aspx?sourcedoc={21f180ba-35dd-441c-92ae-6539b32e6bb8}&amp;action=embedview&amp;wdAr=1.7777777777777777" width="476px" height="288px" frameborder="0">Това е вграден файл тип \"презентация\" на <a target="_blank" href="https://office.com">Microsoft Office</a>, поддържан от <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>,link: "History_files/presentation.files/6-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Ранни царства", link: "History_files/presentation.files/6-class/presentation1.pdf"},
+    { id: 1, title: "Урок 1: Общество и всекидневие в България (кр. на XII - XIV в.)", link: "/History_files/presentation.files/6-class/Общество_и_всекидневие_в_България_(кр. на XII - XIV в.).pdf"},
+    { id: 2, title: "Урок 2: Общество и всекидневие във Византия (кр. на XII - XIV в.)", link: "/courses/presentations/6"},
   ],
   "7-class": [
-    { id: 1, title: "Урок 1: Възраждането", link: "History_files/presentation.files/7-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Новата епоха", link: "History_files/presentation.files/7-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: Въстанието на Асеневци и възстановяването на Българската държава", link: "/History_files/presentation.files/7-class/Асен_и_Петър.pdf" },
+    { id: 2, title: "Урок 2: Българското националноосвободително движение (1869 – 1875 г.)", link: "/courses/presentations/7" },
   ],
   "8-class": [
-    { id: 1, title: "Урок 1: Индустриализацията", link: "History_files/presentation.files/8-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Политически промени", link: "History_files/presentation.files/8-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: Българската екзархия и търговските агенции в Македония и Одринско", link: "/History_files/presentation.files/8-class/Българска_Екзархия.pdf" },
+    { id: 2, title: "Урок 2: Обществени движения и политически учения през първата половина на XIX век", link: "/courses/presentations/8" },
   ],
   "9-class": [
-    { id: 1, title: "Урок 1: България след Освобождението", link: "History_files/presentation.files/9-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Балканските войни", link: "History_files/presentation.files/9-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: България в Първата световна война 1914-1918 г.", link: "/History_files/presentation.files/9-class/УЧАСТИЕ_НА_БЪЛГАРИЯ_В ПЪРВАТА_СВЕТОВНА_ВОЙНА.pdf" },
+    { id: 2, title: "Урок 2: Версайско-Вашингтонска система. Идеи за мир", link: "/courses/presentations/9" },
   ],
   "10-class": [
-    { id: 1, title: "Урок 1: Първата световна война", link: "History_files/presentation.files/10-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Междувоенният период", link: "History_files/presentation.files/10-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: Участие на българите в Първата световна война", link: "/History_files/presentation.files/10-class/УЧАСТИЕ_НА_БЪЛГАРИЯ_В ПЪРВАТА_СВЕТОВНА_ВОЙНА.pdf" },
+    { id: 2, title: "Урок 2: България в годините на Втората световна война", link: "/courses/presentations/10" },
   ],
   "11-class": [
-    { id: 1, title: "Урок 1: Втората световна война", link: "History_files/presentation.files/11-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Студената война", link: "History_files/presentation.files/11-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: Християнизация на българите при княз Борис I (852-893 г.)", link: "/History_files/presentation.files/11-class/Християнизация_на_България.pdf" },
+    { id: 2, title: "Урок 2: Политическото устройство на Дунавска България през VII-VIII в.", link: "/courses/presentations/11" },
   ],
   "12-class": [
-    { id: 1, title: "Урок 1: Глобализацията", link: "History_files/presentation.files/12-class/presentation1.pdf" },
-    { id: 2, title: "Урок 2: Съвременна България", link: "History_files/presentation.files/12-class/presentation2.pdf" },
+    { id: 1, title: "Урок 1: Иконоборството във Византия (VIII–IX в.) - Йоан Дамаскин", link: "/History_files/presentation.files/12-class/Йоан_Дамаскин.pdf" },
+    { id: 2, title: "Урок 2: Българската средновековна държава (VII-VIII в.) ", link: "/courses/presentations/12" },
   ],
 };
 

@@ -8,7 +8,7 @@ function PresentationsPageIT() {
 
   return (
     <div className="presentations-page">
-      <h1 className="presentations-header">Презентации за {classId.replace("-", " ").replace("class", "").trim()} клас</h1>
+      <h1 className="presentations-header">Презентации за {classId.replace("-", " ").replace("class", "").trim()}. клас</h1>
       <div className="presentations-container">
         {classPresentations.length > 0 ? (
           <ul className="presentations-list">

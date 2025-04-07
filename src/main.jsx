@@ -12,6 +12,7 @@ import PresentationsPage from './pages/presentations/PresentationsPage.jsx';
 import VideosPage from './pages/videos/VideosPage.jsx';
 import PresentationsPageIT from './pages/presentations/PresentationsPageIT.jsx'; // Име променено
 import VideosPageIT from './pages/videos/VideosPageIT.jsx'; // Име променено
+import Test from './pages/Test.jsx';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +27,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="courses/presentations/:classId" element={<PresentationsPage />} />
           <Route path="courses/videos/:classId" element={<VideosPage />} />
           {/* Нови маршрути за IT */}
+          <Route path='test' element={<Test />} />
           <Route path="it/presentations/:classId" element={<PresentationsPageIT />} />
           <Route path="it/videos/:classId" element={<VideosPageIT />} />
         </Route>

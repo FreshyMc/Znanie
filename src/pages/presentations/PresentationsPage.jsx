@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import presentations from "../data/presentations/";
+import presentations from "../data/presentations";
 import "../../styles/courses.css"; // Импортиране на стилизиращия файл
 
 function PresentationsPage() {
@@ -8,16 +8,15 @@ function PresentationsPage() {
 
   return (
     <div className="presentations-page">
-      <h1 className="presentations-header">Презентации за {classId.replace("-", " ").replace("class", "").trim()} клас</h1>
+      <h1 className="presentations-header">Презентации за {classId.replace("-", " ").replace("class", "").trim()}. клас</h1>
       <div className="presentations-container">
         {classPresentations.length > 0 ? (
           <ul className="presentations-list">
             {classPresentations.map((item) => (
               <li key={item.id} className="presentation-item">
-                <div>{item?.presentation}</div>
-                <p className="presentation-link">
+                <a href={item.link} target="_blank" rel="noopener noreferrer" className="presentation-link">
                   {item.title}
-                </p>
+                </a>
               </li>
             ))}
           </ul>
