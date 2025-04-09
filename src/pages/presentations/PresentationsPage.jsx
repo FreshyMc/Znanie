@@ -14,9 +14,15 @@ function PresentationsPage() {
           <ul className="presentations-list">
             {classPresentations.map((item) => (
               <li key={item.id} className="presentation-item">
-                <a href={item.link} target="_blank" rel="noopener noreferrer" className="presentation-link">
-                  {item.title}
-                </a>
+                {
+                  (item.external ?? false) ? (
+                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="presentation-link">
+                      {item.title}
+                    </a>
+                  ) : (
+                    <Link to={item.link} className="presentation-link">{item.title}</Link>
+                  )
+                }
               </li>
             ))}
           </ul>
