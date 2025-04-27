@@ -9,20 +9,15 @@ function PresentationsPageIT() {
   return (
     <div className="presentations-page">
       <h1 className="presentations-header">Презентации за {classId.replace("-", " ").replace("class", "").trim()}. клас</h1>
-      <div className="presentations-container">
+      <div className="videos-container">
         {classPresentations.length > 0 ? (
-          <ul className="presentations-list">
+          <ul className="videos-list">
             {classPresentations.map((item) => (
-              <li key={item.id} className="presentation-item">
-                {
-                  (item.external ?? false) ? (
-                    <a href={item.link} target="_blank" rel="noopener noreferrer" className="presentation-link">
-                      {item.title}
-                    </a>
-                  ) : (
-                    <Link to={item.link} className="presentation-link">{item.title}</Link>
-                  )
-                }
+              <li key={item.id} className="video-item">
+                <h3 class="video-title">{item.title}</h3>
+                <div style={{width: '100%', height: '350px'}} className="presentation">
+                  { item?.element && (item.element)}
+                </div>
               </li>
             ))}
           </ul>

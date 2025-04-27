@@ -1,7 +1,7 @@
 const presentations = {
   "5-class": [
-    { id: 1, title: "Урок 1: Въведение в информационните технологии и компютърните системи", link: "/IT_files/presentation.files/5-class/Компютърна_система_и_информационни_технологии.pdf", external: true },
-    { id: 2, title: "Урок 2: Диалог на потребителите с компютърни приложения", link: "/it/presentations/5" },
+    { id: 1, title: "Урок 1: Въведение в информационните технологии и компютърните системи", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQktu--S2iF8lHbcQz8LMnSovORzw7s8EFDTLXXMIO6Zj43_HbvU7WoPBtPTh68RFBaNL6UfNMBeK21/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />, link: "/IT_files/presentation.files/5-class/Компютърна_система_и_информационни_технологии.pdf", external: true },
+    { id: 2, title: "Урок 2: Диалог на потребителите с компютърни приложения", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQUUPjEq7iYn1NT2dA9DS1_ItguAwMr1Ejz2avY3gUQFP5DSmtBZNjdUTiDR3vkAjxvjZr4V0m2cADA/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />, link: "/it/presentations/5" },
   ],
   "6-class": [
     { id: 1, title: "Урок 1: Дигитализиране на изображение. Обработване и запазване", link: "/IT_files/presentation.files/6-class/Дигитализиране_на_изображение.pdf", external: true },

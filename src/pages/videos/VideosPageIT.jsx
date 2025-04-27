@@ -11,7 +11,7 @@ function VideosPageIT() {
   return (
     <div className="videos-page py-5">
       <h1 className="presentations-header">
-        Видеоматериали за {classId.replace("-", " ").replace("class", "").trim()} клас
+        Видеоматериали за {classId.replace("-", " ").replace("class", "").trim()}. клас
       </h1>
       <div className="videos-container">
         {classVideos.length > 0 ? (

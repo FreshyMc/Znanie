@@ -249,3 +249,8 @@ video {
     padding: 10px 16px;
   }
 }
+
+.presentation iframe {
+  width: 100%;
+  height: 100%;
+}
