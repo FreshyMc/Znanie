@@ -1,6 +1,6 @@
 const presentations = {
   "5-class": [
-    { id: 1, title: "Урок 1: Въведение в информационните технологии и компютърните системи", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQktu--S2iF8lHbcQz8LMnSovORzw7s8EFDTLXXMIO6Zj43_HbvU7WoPBtPTh68RFBaNL6UfNMBeK21/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />},
+    { id: 1, title: "Урок 1: Въведение в информационните технологии и компютърните системи", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQktu--S2iF8lHbcQz8LMnSovORzw7s8EFDTLXXMIO6Zj43_HbvU7WoPBtPTh68RFBaNL6UfNMBeK21/pubembed?start=false&loop=false&delayms=3000" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />},  
     { id: 2, title: "Урок 2: Диалог на потребителите с компютърни приложения", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSQMPjb2jyeN6NgGyyZzcGP3veUh9MRDxXgCwOrcJnlYLbT93SSFtO8MASRGZCwvN5VS-b-BWpG95zT/pubembed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />},
   ],
   "6-class": [

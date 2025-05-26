@@ -2,6 +2,8 @@ const videos = {
   "5-class": [
     { id: 1, title: "Видео урок 1: Богове и герои в Древна Елада", link: "/History_files/video.files/5-class/Богове_и_герои_в_Древна_Елада.mp4" },
     { id: 2, title: "Видео урок 2: Историята и нейните източници", link: "/History_files/video.files/5-class/Историята_и_нейните_източници.mp4" },
+    { id: 4, title: "Видео урок 3: Древна Тракия в Римския свят", link: "/History_files/video.files/5-class/Спартак.mp4" },
+    { id: 3, title: "Видео урок 4: Древна Тракия в Римския свят", link: "/History_files/video.files/5-class/Император_Траян.mp4" },
   ],
   "6-class": [
     { id: 1, title: "Видео урок 2: Въведение в европейското средновековие", link: "/History_files/video.files/6-class/Въведение_в_европейското_средновековие.mp4" },

@@ -10,8 +10,8 @@ import Contacts from './pages/Contacts.jsx';
 import About from './pages/About.jsx';
 import PresentationsPage from './pages/presentations/PresentationsPage.jsx';
 import VideosPage from './pages/videos/VideosPage.jsx';
-import PresentationsPageIT from './pages/presentations/PresentationsPageIT.jsx'; // Име променено
-import VideosPageIT from './pages/videos/VideosPageIT.jsx'; // Име променено
+import PresentationsPageIT from './pages/presentations/PresentationsPageIT.jsx';
+import VideosPageIT from './pages/videos/VideosPageIT.jsx';
 import Test from './pages/Test.jsx';
 
 createRoot(document.getElementById('root')).render(

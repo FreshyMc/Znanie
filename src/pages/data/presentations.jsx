@@ -3,7 +3,9 @@ const presentations = {
     { id: 1, title: "Урок 1: Днешните български земи през праисторическата епоха", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQVG3hd7qMkxhnsJUTHQUhNzg6BQcMjkMhnHHepVy4G40aO-_ANxFT6Gx-_-i774v9lH4UGFoTnWKvG/pubembed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />, external: true},
     { id: 2, title: "Урок 2: Земеделието променя света", 
       element: (<iframe src="https://www.canva.com/design/DAGS5ESEYMM/fOFio-PJmb8foiloXq0pqA/view?embed" frameBorder="0" allowFullScreen={true} style={{ width: "100%", height: "100%", border: "none" }}/>), external: true},
-  ],
+    { id: 3, title: "Урок 3: Древна Тракия в Римския свят", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ3FuZ3aUUlithD1mC5YQJKNVs2dlgEdXkiXplBbQT7xQ7rSwmZJLlRDmfXCfwUPfBoXvjLbfytHFul/pubembed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"/>, external: true},
+
+    ],
  "6-class": [
   { id: 1, title: "Урок 1: Общество и всекидневие в България (кр. на XII - XIV в.)", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRk31cYJmea6sed3Di5s0m3x_ul8vTKHhuyPeA3BlwiaXn8McZC-umQWDr1sgTL_cucYJBMcQbCWV2b/pubembed?start=false&loop=false&delayms=3000" frameborder="0" width="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />, external: true },
   { id: 2, title: "Урок 2: Общество и всекидневие във Византия (кр. на XII - XIV в.)", element: <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vSX3_YO7gE8qRtboFZeT744ncpXnTNHzyEokPN-npNLgOlxR1g3Yh5AsCD6U9T4U7Cs1P4vQZrIoGmm/pubembed?start=false&loop=false&delayms=3000" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" />, external: true},
