@@ -3,6 +3,8 @@ import { useId, useState } from 'react'
 import Logo from './assets/logo.png';
 import { Link } from 'react-router-dom';
 
+import MainCarousel from './components/carousel/Carousel';
+
 // Импортиране на изображения за слайдове и аватари
 import Slide1 from './assets/kids_1.jpg';
 import Slide2 from './assets/kids_2.jpg';
@@ -80,7 +82,7 @@ function App() {
         {/* Хедър с карусел */}
         <header className='row main-header'>
           <div className='col-12 p-0'>
-            <Carousel slides={headerSlides} isHeader={true}/>
+            <MainCarousel slides={headerSlides} />
           </div>
         </header>
 
