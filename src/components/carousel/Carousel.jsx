@@ -34,7 +34,7 @@ export default function Carousel({ slides }) {
                 if (!isHovered.current) {
                     handleNextSlide();
                 }
-            }, 3000); // Change every 3 seconds
+            }, 7000); // Change every 3 seconds
         };
 
         startAutoSlide();
