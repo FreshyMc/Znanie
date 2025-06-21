@@ -1,5 +1,5 @@
 // Импортиране на необходимите зависимости и ресурси
-import { useId, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import Logo from './assets/logo.png';
 import { Link } from 'react-router-dom';
 
@@ -82,7 +82,7 @@ function App() {
         {/* Хедър с карусел */}
         <header className='row main-header'>
           <div className='col-12 p-0'>
-            <MainCarousel slides={headerSlides} />
+            <Carousel slides={headerSlides} isHeader />
           </div>
         </header>
 
@@ -194,16 +194,15 @@ function Carousel({slides, isHeader = false}) {
 // Слайд за хедър карусела
 function HeaderSlide({ header = 'Znanie', text, active, image }) {
   return (
-      <div className={`carousel-item h-100 ${active ? 'active' : ''}`} data-bs-interval="5000">
+      <div className={`carousel-item h-100 ${active ? 'active' : ''}`}>
         <div
             className="slide"
             style={{
-              backgroundImage: `url(${image})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
+              position: 'relative',
               height: '60vh', // Височина на контейнера
             }}
         >
+          <img src={image} alt='Slide Content' style={{position: 'absolute', left: 0, top: 0, width: '100%', height: '100%', backgroundPosition: 'center', objectFit: 'cover'}} />
           <div className="slide-content">
             <p className="text-center">{text}</p>
           </div>
