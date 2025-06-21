@@ -27,16 +27,20 @@ export default function Carousel({ slides }) {
         setPage(prev => prev - 1);
     };
 
+    const startAutoSlide = () => {
+        if (intervalRef.current) {
+            clearInterval(intervalRef.current);
+        }
+        
+        intervalRef.current = setInterval(() => {
+            if (!isHovered.current) {
+                handleNextSlide();
+            }
+        }, 7000);
+    };
+
     // Auto-slide logic
     useEffect(() => {
-        const startAutoSlide = () => {
-            intervalRef.current = setInterval(() => {
-                if (!isHovered.current) {
-                    handleNextSlide();
-                }
-            }, 7000); // Change every 3 seconds
-        };
-
         startAutoSlide();
         return () => clearInterval(intervalRef.current);
     }, []);
@@ -50,17 +54,13 @@ export default function Carousel({ slides }) {
                 container.style.transition = 'none';
                 setPage(1);
                 requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        container.style.transition = '0.5s ease left';
-                    });
+                    container.style.transition = '0.5s ease left';
                 });
             } else if (page === 0) {
                 container.style.transition = 'none';
-                setPage(extendedSlides.length - 2);
+                setPage(extendedSlides.length - 1);
                 requestAnimationFrame(() => {
-                    requestAnimationFrame(() => {
-                        container.style.transition = '0.5s ease left';
-                    });
+                    container.style.transition = '0.5s ease left';
                 });
             }
         };
@@ -76,6 +76,7 @@ export default function Carousel({ slides }) {
 
     const handleMouseLeave = () => {
         isHovered.current = false;
+        startAutoSlide();
     };
 
     return (

@@ -1,6 +1,7 @@
 .carousel {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: calc(100% - 116px);
     background-color: #fff;
     overflow: hidden;
 }
@@ -29,39 +30,40 @@
 }
 
 .slideContent p {
-    position: absolute;
-    bottom: 15%;
-    left: 50%;
-    padding: 25px;
-    margin: 0;
-    width: 60%;
-    height: auto;
     background-color: rgba(0, 0, 0, .35);
-    border-radius: .45rem;
-    font-size: 1.6rem;
-    font-family: 'Georgia', serif;
-    text-align: center;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
     transform: translateX(-50%);
+    max-width: 80%;
+    font-size: 22px;
+    text-indent: 20px;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 .buttons {
     position: absolute;
-    bottom: 20%;
+    bottom: 10%;
     left: 0;
     padding: 0 2%;
     display: flex;
     justify-content: space-between;
     width: 100%;
     height: auto;
-    transform: translateY(-20%);
+    transform: translateY(calc(-75px / 2.5));
     z-index: 2;
 }
 
 .prevButton,
 .nextButton {
     display: flex;
-    width: 90px;
-    height: 90px;
+    width: 75px;
+    height: 75px;
     font-size: 2.5rem;
     align-items: center;
     justify-content: center;

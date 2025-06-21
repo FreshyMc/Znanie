@@ -82,7 +82,7 @@ function App() {
         {/* Хедър с карусел */}
         <header className='row main-header'>
           <div className='col-12 p-0'>
-            <Carousel slides={headerSlides} isHeader />
+            <MainCarousel slides={headerSlides} />
           </div>
         </header>
 
