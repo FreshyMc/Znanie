@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 
 import styles from './carousel.module.css';
 
+const slideInterval = 5000;
+
 export default function Carousel({ slides }) {
     const extendedSlides = [
         slides[slides.length - 1],
@@ -36,7 +38,7 @@ export default function Carousel({ slides }) {
             if (!isHovered.current) {
                 handleNextSlide();
             }
-        }, 7000);
+        }, slideInterval);
     };
 
     // Auto-slide logic
@@ -82,8 +84,6 @@ export default function Carousel({ slides }) {
     return (
         <div
             className={styles.carousel}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
         >
             <div
                 className={styles.slidesContainer}
@@ -94,7 +94,7 @@ export default function Carousel({ slides }) {
                 }}
             >
                 {extendedSlides.map((slide, index) => (
-                    <Slide {...slide} key={index} />
+                    <Slide handleMouseEnter={handleMouseEnter} handleMouseLeave={handleMouseLeave} {...slide} key={index} />
                 ))}
             </div>
             <div className={styles.buttons}>
@@ -109,11 +109,11 @@ export default function Carousel({ slides }) {
     );
 }
 
-function Slide({ image, text }) {
+function Slide({ image, text, handleMouseEnter, handleMouseLeave }) {
     return (
         <div className={styles.slideContent}>
             <img src={image} alt={text} />
-            <p>{text}</p>
+            <p onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>{text}</p>
         </div>
     );
 }
